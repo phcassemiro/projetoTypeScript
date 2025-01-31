@@ -1,15 +1,11 @@
-import { Request, Response  } from "express";
+import { Request, Response } from "express";
 
 let listaDePets = [];
 
 export default class PetController {
-    constructor() {
-        this.criaPet = this.criaPet.bind(this);
-    }
-
-    criaPet(req: Request, res: Response) {
-        const novoPet = req.body;
-        listaDePets.push(novoPet);
-        return res.status(201).json(novoPet);
-    }
-};
+  criaPet(req: Request, res: Response) {
+    const novoPet = req.body;
+    listaDePets.push(novoPet);
+    return res.status(201).json(novoPet);
+  }
+}
